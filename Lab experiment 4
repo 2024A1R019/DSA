@@ -1,3 +1,4 @@
+//WAP to evaluate postfix , prefix and infix expression using stacks.
 #include<stdio.h>
 #include<string.h>
 #include<math.h>

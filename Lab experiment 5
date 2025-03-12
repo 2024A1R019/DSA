@@ -1,4 +1,4 @@
-WAP to convert an infix expression to its corresponding postfix and prefix expression and vice-versa
+//WAP to convert an infix expression to its corresponding postfix and prefix expression and vice-versa
 #include<stdio.h>
 #include<ctype.h>
 #include<malloc.h>

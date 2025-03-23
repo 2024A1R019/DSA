@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define SIZE 100
+int stack[SIZE], top=-1;
+int isempty(){
+    if(top==-1){
+        return 1;
+    }
+    else{
+        return 0;
+}
+}
+int isfull(){
+    if(top==SIZE-1){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+void push(){
+    if(isfull()){
+        printf(" ");
+    }
+    else
+    {        int value;
+        scanf("%d",&value);
+        stack[++top]=value;
+    }
+    
+}
+void pop(){
+    if(isempty())
+        printf(" ");
+    
+    else{
+        top--;
+    }
+    
+}
+void display(){
+     for( int i=top;i>=0;i--){
+        printf("%d ",stack[i]);}
+}
+
+int main() {
+     push();
+     push();
+     push();
+     pop();
+     push();
+     push();
+     pop();
+     pop();
+     pop();
+     display();
+return 0;
+}

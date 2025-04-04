@@ -1,4 +1,4 @@
-#include <stdio.h> //17-3-25 exp-7
+#include <stdio.h> 
 #include <stdlib.h>
 typedef struct Node
 {
@@ -179,7 +179,7 @@ int main()
         printf("2. insert node at end\n");
         printf("3. insert node at  any position\n ");
         printf("4. delete node from beginning\n");
-        printf("5.delete node from end\n");
+        printf("5. delete node from end\n");
         printf("6. delete node from any position\n");
         printf("7. search element in list\n");
         printf("8. sort elements\n");
@@ -230,7 +230,7 @@ int main()
         case 10:
             exit(0);
         default:
-            printf("invalid choice !!!!\n");//24 march
+            printf("invalid choice !!!!\n");
         }
         printf("\n");
     }

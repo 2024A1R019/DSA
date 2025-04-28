@@ -1,0 +1,80 @@
+#include <stdio.h>
+int main()
+{
+    int pin, enteredPin;
+    int balance = 50000;
+    int choice;
+    int amount;
+    printf("Set your ATM PIN: ");
+    scanf("%d", &pin);
+    printf("Enter your ATM PIN to access the ATM: ");
+    scanf("%d", &enteredPin);
+    if (enteredPin == pin)
+    {
+        printf("PIN Verified Successfully.\n");
+
+        do
+        {
+            printf("\n*** ATM Menu ***\n");
+            printf("1. Check Balance\n");
+            printf("2. Cash Withdrawal\n");
+            printf("3. Cash Deposit\n");
+            printf("4. Exit\n");
+            printf("Enter your choice: ");
+            scanf("%d", &choice);
+
+            switch (choice)
+            {
+            case 1:
+                printf("Your current balance is: Rs %d\n", balance);
+                break;
+
+            case 2:
+                printf("Enter amount to withdraw: ");
+                scanf("%d", &amount);
+                if (amount > balance)
+                {
+                    printf("Insufficient balance!\n");
+                }
+                else if (amount <= 0)
+                {
+                    printf("Invalid amount entered!\n");
+                }
+                else
+                {
+                    balance = balance - amount;
+                    printf("Please collect your cash.\n");
+                }
+                break;
+
+            case 3:
+                printf("Enter amount to deposit: ");
+                scanf("%d", &amount);
+                if (amount <= 0)
+                {
+                    printf("Invalid amount entered!\n");
+                }
+                else
+                {
+                    balance = balance + amount;
+                    printf("Amount deposited successfully.\n");
+                }
+                break;
+
+            case 4:
+                printf("Thank you for using the ATM.\n");
+                break;
+
+            default:
+                printf("Invalid choice! Please try again.\n");
+            }
+
+        } while (choice != 4);
+    }
+    else
+    {
+        printf("Incorrect PIN. Access Denied.\n");
+    }
+
+    return 0;
+}
